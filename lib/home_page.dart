@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         itemBuilder: (context, index){
                           return ListTile(
                             title: Text(demo[index].company),
-                            leading: Image.network(
+                            leading:(demo[index].companyLogo == null) ? FlutterLogo() : Image.network(
                               demo[index].companyLogo,
                               width: 150,
                               fit: BoxFit.cover,
